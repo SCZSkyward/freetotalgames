@@ -1,0 +1,34 @@
+<title>Home</title>
+
+<style>
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    body {
+        background-image: url(https://lh5.googleusercontent.com/gqRNrfefgwLugvvU4j3ffGFQb8i4tkCson2XYF73CI5fnp24GFNOyasq605-dQILf4QhgHH1hOD7LbjTUHt0Z7k=w16383);
+    }
+
+    form {
+        align-items: center;
+    }
+</style>
+
+<body>
+    <img src="logo.png" id="logo">
+    <form id="form"> 
+        <input type="search" id="query" name="q" placeholder="Search...">
+        <button>Search</button>
+      </form>
+</body>
+
+<script type="text/javascript">
+    document.getElementById('form').onsubmit = function() {
+        window.location = 'http://www.google.com/search?q=site:yourdomainname ' + document.getElementById('query').value;
+        return false;
+    }
+</script>
+    
